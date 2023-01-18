@@ -1,0 +1,1 @@
+/*eslint-disable*/module.exports={messages:{"langSelect.button":"langSelect.button","langSelect.label":"langSelect.label","langSelect.title":"langSelect.title"}};

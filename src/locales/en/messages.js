@@ -1,0 +1,1 @@
+/*eslint-disable*/module.exports={messages:{"langSelect.button":"Select language","langSelect.label":["Selected Language is ",["lang"]],"langSelect.title":"Inbox"}};

@@ -1,0 +1,1 @@
+/*eslint-disable*/module.exports={messages:{"langSelect.button":"Sélectionnez la langue","langSelect.label":["La langue parlée est ",["lang"]],"langSelect.title":"Réception"}};
