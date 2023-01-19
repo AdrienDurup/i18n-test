@@ -14,13 +14,13 @@ msgstr ""
 "Plural-Forms: \n"
 
 #: src/Inbox.js:23
-msgid "langSelect.button"
-msgstr "Sélectionnez la langue"
+#~ msgid "langSelect.button"
+#~ msgstr "Sélectionnez la langue"
 
 #: src/Inbox.js:21
-msgid "langSelect.label"
-msgstr "La langue parlée est {lang}"
+#~ msgid "langSelect.label"
+#~ msgstr "La langue parlée est {{lang}}"
 
 #: src/Inbox.js:26
-msgid "langSelect.title"
-msgstr "Réception"
+#~ msgid "langSelect.title"
+#~ msgstr "Réception"
