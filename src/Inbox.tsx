@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import i18n from './i18n';
 import { Trans, useTranslation } from 'react-i18next';
 
+import './styles.css';
 /**
  * 
  * NOTES
@@ -14,19 +15,19 @@ const Inbox = () => {
   const { t } = useTranslation();
   const [_lang, setLang] = useState('');
   console.log("I18N", _lang);
-  const messages = [{}, {},{}];
-  const messagesCount = messages.length;
+  const messages: Array<Object> = [{}, {}, {}];
+  const messagesCount: Number & number = messages.length;
   /* const lastLogin = new Date(); */
-  const markAsRead = () => { alert('Marked as read.') };
+  const markAsRead: React.MouseEventHandler = () => { alert('Marked as read.') };
 
-  const handleChangeLang = () => {
+  const handleChangeLang: React.MouseEventHandler = () => {
     const newLang = i18n.language !== 'fr' ? 'fr' : 'en';
     console.log("newLang", newLang);
     setLang(newLang);// for re-render
     i18n.changeLanguage(newLang);
   };
 
-  return (console.log(i18n.language) ??
+  return (
     <div>
       <Trans>
         {t('langSelect.label', { lang: i18n.language })}
@@ -52,10 +53,11 @@ const Inbox = () => {
       <p>
         <Trans i18nKey="messages.count"
           count={messagesCount}
-         // values={{ count: messagesCount }}
-        >
-        {{ count: messagesCount }}
-        </Trans>
+        components={[<Highlight />]}
+        //values={{ count: messagesCount }}
+        />
+        {/*         {{ count: messagesCount }}
+        </Trans> */}
       </p>
       {/*
       <footer>
@@ -68,3 +70,14 @@ const Inbox = () => {
 }
 
 export default Inbox;
+
+interface IHighlight{
+  children?:React.ReactNode
+}
+const Highlight = ({ children }:IHighlight) => {
+  return (
+    <span className="Highlight">
+      {children}
+    </span>
+  );
+}

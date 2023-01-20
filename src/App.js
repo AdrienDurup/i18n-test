@@ -1,6 +1,6 @@
 import './App.css';
 
-import Inbox from './Inbox';
+import Inbox from './Inbox.tsx';
 
 function App() {
   return (
